@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Personal portfolio of projects and qualifications."><meta name="theme-color" id="themeColor" content="#0d1117"><title>Sachin Rajendran | Portfolio</title><script>
+      (function () {
+        try {
+          var stored = null;
+          try {
+            stored = localStorage.getItem("theme");
+          } catch (error) {
+            void error;
+          }
+          var tz = "Asia/Kolkata";
+          var hour = Number(new Date().toLocaleTimeString("en-GB", { timeZone: tz, hour: "numeric", hour12: false }));
+          var isDaytime = hour >= 7 && hour < 19;
+          var theme = stored || (isDaytime ? "light" : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          void error;
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/index.zugnadE5.css"></head> <body>  <header class="site-header"> <div class="container header-inner"> <a href="#home" class="brand"> <span class="brand-avatar">SR</span> <span class="brand-name">Sachin Rajendran</span> </a> <nav class="site-nav" id="siteNav" aria-label="Primary"> <a href="#home" class="nav-link">Home</a><a href="#about" class="nav-link">About</a><a href="#skills" class="nav-link">Skills</a><a href="#projects" class="nav-link">Projects</a><a href="#qualifications" class="nav-link">Qualifications</a><a href="#contact" class="nav-link">Contact</a> </nav> <div class="header-actions"> <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme"> <svg class="icon icon-sun" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"> <path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0Zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm8-5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8ZM2.25 8a.75.75 0 0 1-.75.75H0a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 2.25 8Zm9.55-4.8.94-.94a.75.75 0 0 1 1.06 1.06l-.94.94a.75.75 0 0 1-1.06-1.06ZM3.2 11.2l-.94.94a.75.75 0 0 1-1.06-1.06l.94-.94a.75.75 0 0 1 1.06 1.06Zm9.5 1.06.94.94a.75.75 0 0 1-1.06 1.06l-.94-.94a.75.75 0 0 1 1.06-1.06ZM3.2 4.8a.75.75 0 0 1-1.06 1.06l-.94-.94a.75.75 0 0 1 1.06-1.06l.94.94Zm7.08 2.4A2.28 2.28 0 1 1 7.28 9.6 2.28 2.28 0 0 1 10.28 7.2Z"></path> </svg> <svg class="icon icon-moon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"> <path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.5 5.5 0 1 0 7.678-7.678Z"></path> </svg> </button> <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="icon icon-menu" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"> <path fill="currentColor" d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75Zm0 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75Z"></path> </svg> <svg class="icon icon-close" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"> <path fill="currentColor" d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path> </svg> </button> </div> </div> </header> <script type="module">const n=document.querySelector('meta[name="theme-color"]');document.getElementById("themeToggle").addEventListener("click",()=>{const e=document.documentElement,t=e.getAttribute("data-theme")==="dark"?"light":"dark";e.setAttribute("data-theme",t),localStorage.setItem("theme",t),n&&n.setAttribute("content",t==="dark"?"#0d1117":"#ffffff")});const i=()=>{if(localStorage.getItem("theme"))return;const e=Number(new Date().toLocaleTimeString("en-GB",{timeZone:"Asia/Kolkata",hour:"numeric",hour12:!1})),t=e>=7&&e<19?"light":"dark";document.documentElement.setAttribute("data-theme",t),n&&n.setAttribute("content",t==="dark"?"#0d1117":"#ffffff")};setInterval(i,300*1e3);const o=document.getElementById("navToggle");o.addEventListener("click",()=>{const e=document.documentElement.classList.toggle("nav-open");o.setAttribute("aria-expanded",String(e))});document.querySelectorAll(".nav-link").forEach(e=>{e.addEventListener("click",()=>{document.documentElement.classList.remove("nav-open"),o.setAttribute("aria-expanded","false")})});const r=document.querySelectorAll(".nav-link"),s=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){r.forEach(a=>a.classList.remove("active-link"));const c=document.querySelector(`a[href="#${t.target.id}"]`);c&&c.classList.add("active-link")}})},{rootMargin:"-45% 0px -50% 0px"});r.forEach(e=>{const t=document.querySelector(e.getAttribute("href"));t&&s.observe(t)});</script> <main> <section id="home" class="section hero-section"> <div class="container hero-panel"> <div class="hero-card"> <div class="hero-left"> <img class="avatar avatar-lg" id="heroAvatar" src="/assets/me.jpg" alt="Sachin Rajendran profile photo"> <div class="hero-socials"> <a class="social-icon" href="https://github.com/sachinrajendran19-star" target="_blank" rel="noopener noreferrer" aria-label="github"> <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> </a><a class="social-icon" href="https://www.linkedin.com/in/sachin-rajendran-bb5865367" target="_blank" rel="noopener noreferrer" aria-label="linkedin"> <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146Zm4.943 12.248V6.169H2.542v7.225h2.401Zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016Zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4Z"/></svg> </a><a class="social-icon" href="mailto:sachinrajendran.19@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email"> <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88l6.5-3.81Z"/></svg> </a> </div> </div> <div class="hero-right"> <p class="hero-greet" id="heroGreet"></p> <h1 class="hero-name">Sachin Rajendran</h1> <p class="hero-tagline" id="heroTagline"></p> <p class="hero-location"> <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"> <path fill="currentColor" d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v1.5a4 4 0 0 0-5.95 5.212v-.78a4 4 0 0 1 5.95-5.93Zm0 0v4.536a4 4 0 0 1-6.022 3.533l-.1-.058 1.06-1.06a2.5 2.5 0 0 0 4.06-1.454h-2.49v-2.5h2.49c.015-.335 0-.68-.05-1.012l.952-.985Z"></path> </svg> Chennai, Tamil Nadu, India </p> <p class="hero-phone"> <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"> <path fill="currentColor" d="M1.75 1.782c.696 0 1.389.105 2.058.318.571.18.868 1.046.845 1.666-.069 1.871-.739 2.28-.55 3.688.188 1.409 1.3 2.52 2.71 2.71 1.406.188 1.815-.482 3.687-.55.62-.024 1.485.274 1.666.845.213.669.317 1.362.317 2.058 0 .5-.253.965-.622 1.247-.28.21-1.66 1.15-2.636.885-2.866-.775-4.785-1.038-6.645-2.898-1.86-1.861-2.124-3.78-2.898-6.646-.265-.977.674-2.355.885-2.635.282-.369.747-.622 1.246-.622ZM8 0a8 8 0 1 1 .699 15.966l-4.49 1.348a1 1 0 0 1-1.235-1.002l.059-4.702a8 8 0 0 1 4.967-11.61Z"></path> </svg> +91 9342937175 </p> <div class="hero-actions"> <a class="btn btn-primary" href="/assets/resume.pdf" download> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"> <path fill="currentColor" d="M7.47 10.78a.75.75 0 0 0 1.06 0l3.75-3.75a.75.75 0 0 0-1.06-1.06L8.75 8.44V1.75a.75.75 0 0 0-1.5 0v6.69L4.78 5.97a.75.75 0 0 0-1.06 1.06l3.75 3.75ZM3.75 13.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path> </svg>
+Download CV
+</a> <a class="btn btn-ghost" href="#projects">View Projects</a> </div> <div class="live-bar"> <span class="live-dot"></span> <span class="live-status">Open to opportunities</span> <span class="live-sep" aria-hidden="true">·</span> <span class="live-now" id="heroClock"></span> <span class="live-sep" aria-hidden="true">·</span> <span class="live-now" id="todayLine"></span> <span class="live-sep" aria-hidden="true">·</span> <span class="live-now" id="phaseLabel"></span> </div> </div> </div> </div> </section> <script>(function(){const words = ["Software Tester","Web Developer","App Developer","Cybersecurity Enthusiast"];
+
+  const TZ = "Asia/Kolkata";
+
+  const avatar = document.getElementById("heroAvatar");
+  avatar.addEventListener("error", () => {
+    avatar.classList.add("avatar-fallback");
+    avatar.removeAttribute("src");
+    avatar.textContent = "SR";
+  });
+
+  const el = document.getElementById("heroTagline");
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const type = () => {
+    const word = words[wordIndex];
+    charIndex = deleting ? charIndex - 1 : charIndex + 1;
+    el.textContent = word.slice(0, charIndex);
+    el.append(Object.assign(document.createElement("span"), { className: "caret", textContent: "\u00A0" }));
+    if (!deleting && charIndex === word.length) {
+      deleting = true;
+      setTimeout(type, 1400);
+      return;
+    }
+    if (deleting && charIndex === 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, 300);
+      return;
+    }
+    setTimeout(type, deleting ? 45 : 85);
+  };
+  type();
+
+  const hourIn = (now) =>
+    Number(now.toLocaleTimeString("en-GB", { timeZone: TZ, hour: "numeric", hour12: false }));
+
+  const greetingFor = (hour) => {
+    if (hour < 5) return "Good night";
+    if (hour < 12) return "Good morning";
+    if (hour < 17) return "Good afternoon";
+    if (hour < 21) return "Good evening";
+    return "Good night";
+  };
+
+  const phaseFor = (hour) => {
+    if (hour < 5) return "Rested — I will be online in the morning";
+    if (hour < 8) return "Early session — planning the day ahead";
+    if (hour < 13) return "Deep work — coding and testing";
+    if (hour < 15) return "Short midday break";
+    if (hour < 19) return "Afternoon build — web dev and upskilling";
+    return "Evening — learning and side projects";
+  };
+
+  const live = {
+    greet: document.getElementById("heroGreet"),
+    clock: document.getElementById("heroClock"),
+    today: document.getElementById("todayLine"),
+    phase: document.getElementById("phaseLabel"),
+  };
+
+  const format = {
+    clock: new Intl.DateTimeFormat("en-US", {
+      timeZone: TZ,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }),
+    today: new Intl.DateTimeFormat("en-US", {
+      timeZone: TZ,
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
+  };
+
+  const tick = () => {
+    const now = new Date();
+    const hour = hourIn(now);
+    if (live.greet) live.greet.textContent = `${greetingFor(hour)}, Chennai`;
+    if (live.today) live.today.textContent = format.today.format(now);
+    if (live.clock) live.clock.textContent = `${format.clock.format(now)} IST`;
+    if (live.phase) live.phase.textContent = phaseFor(hour);
+  };
+  tick();
+  setInterval(tick, 1000);
+})();</script> <section id="about" class="section"> <div class="container"> <h2 class="section-title">About</h2> <div class="about-grid"> <div class="card reveal"> <p class="about-bio">Hi, I&#39;m Sachin Rajendran.
+
+Final-year Information Technology undergraduate (CGPA: 8.5) with hands-on experience building web applications and database-driven programs in JavaScript, Python, Java, and C through academic and personal projects. Comfortable with Git/GitHub version control, HTML5/CSS3 web fundamentals, and structured problem-solving.
+
+Seeking an entry-level opportunity in software testing, web development, app development, or cybersecurity to apply and grow technical skills in a professional environment.</p> </div> <div class="stats-grid"> <div class="stat-item reveal"> <span class="stat-value">8.5</span> <span class="stat-label">CGPA (B.Tech IT)</span> </div><div class="stat-item reveal"> <span class="stat-value">4</span> <span class="stat-label">Certifications</span> </div><div class="stat-item reveal"> <span class="stat-value">3</span> <span class="stat-label">Projects built</span> </div><div class="stat-item reveal"> <span class="stat-value">2</span> <span class="stat-label">Languages spoken</span> </div> </div> </div> </div> </section> <section id="skills" class="section"> <div class="container"> <h2 class="section-title">Skills &amp; Technologies</h2> <div class="skills-grid"> <div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">JavaScript</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="75"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">Python</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="72"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">Java</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="65"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">C</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="68"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">HTML5 &amp; CSS3</span> <span class="skill-level">Advanced</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="82"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">MongoDB</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="60"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">MySQL</span> <span class="skill-level">Intermediate</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="65"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">Git &amp; GitHub</span> <span class="skill-level">Advanced</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="80"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">JSON</span> <span class="skill-level">Advanced</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="78"></div> </div> </div><div class="skill-item reveal"> <div class="skill-top"> <span class="skill-name">Figma</span> <span class="skill-level">Beginner</span> </div> <div class="skill-bar"> <div class="skill-fill" data-pct="45"></div> </div> </div> </div> </div> </section> <script type="module">const r=document.querySelectorAll(".skill-fill"),s=new IntersectionObserver(t=>{t.forEach(e=>{e.isIntersecting&&(e.target.style.width=e.target.dataset.pct+"%",s.unobserve(e.target))})},{threshold:.3});r.forEach(t=>s.observe(t));</script> <section id="projects" class="section"> <div class="container"> <h2 class="section-title">Projects</h2> <div class="filter-bar" id="filterBar" role="group" aria-label="Filter projects"> <button class="filter-chip active-chip" data-category="All"> All </button><button class="filter-chip" data-category="Web"> Web </button><button class="filter-chip" data-category="Programming"> Programming </button> </div> <div class="projects-grid" id="projectsGrid"></div> </div> </section> <script>(function(){const projects = [{"title":"Personal Portfolio Website","category":"Web","description":"Fully responsive personal portfolio website presenting skills and projects to recruiters, with a modern mobile-friendly UI and multi-section layout (About, Skills, Projects, Contact).","tech":["HTML5","CSS3","JavaScript"],"year":"2026","github":"https://github.com/sachinrajendran19-star","live":""},{"title":"JSON-Based Data Management Project","category":"Programming","description":"Data management project built with JavaScript and Python to parse, structure, and manage JSON-based data end to end.","tech":["JavaScript","Python"],"year":"2025","github":"https://github.com/sachinrajendran19-star","live":""},{"title":"Student Database Management System","category":"Programming","description":"Student Database Management System developed in C using file handling to store, update, and retrieve student records.","tech":["C"],"year":"2025","github":"https://github.com/sachinrajendran19-star","live":""}];
+
+  const grid = document.getElementById("projectsGrid");
+  const bar = document.getElementById("filterBar");
+
+  const links = (project) => {
+    const githubPath = '<path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>';
+    const livePath = '<path fill="currentColor" d="M7.177 3.073 9.573.677A.25.25 0 0 1 9.927 0V0c.042 0 .084.006.119.023a.25.25 0 0 1 .134.143l3.794 9.244a.25.25 0 0 1-.338.325l-2.4-1.216a.25.25 0 0 0-.363.157l-1.098 3.356a.25.25 0 0 1-.328.159.25.25 0 0 1-.134-.143L6.97 9.474a.25.25 0 0 0-.157-.275l-2.292-.966a.25.25 0 0 1-.157-.276.25.25 0 0 1 .263-.164l2.327.424a.25.25 0 0 0 .275-.211l.026-.085-.006-.01a.25.25 0 0 1 .057-.318ZM16 2.5a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5.5.5 0 0 1 .5.5ZM15.5 1.75a.25.25 0 0 1 .25.25v2a.25.25 0 0 1-.25.25h-2a.25.25 0 0 1-.25-.25v-2a.25.25 0 0 1 .25-.25h2ZM7 6.25a.75.75 0 1 0 0 1.5h2.5a.75.75 0 1 0 0-1.5H7Z"/>';
+    let markup = "";
+    if (project.github) {
+      markup += `<a class="linker" href="${project.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">${githubPath}</svg></a>`;
+    }
+    if (project.live) {
+      markup += `<a class="linker" href="${project.live}" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">${livePath}</svg></a>`;
+    }
+    return markup;
+  };
+
+  const card = (project) =>
+    `<article class="project-card visible">
+      <div class="project-head">
+        <span class="project-category">${project.category}</span>
+        <div class="project-links">${links(project)}</div>
+      </div>
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-desc">${project.description}</p>
+      <div class="project-tech">${project.tech.map((tech) => `<span class="tech-pill">${tech}</span>`).join("")}</div>
+      <div class="project-meta"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8Zm.75 1.53a6.53 6.53 0 0 1 5.81 5.72H11.5a.75.75 0 0 1-3 .75V3.1c0-.53.14-1.03.5-1.03.13 0 .17.09.25.3Zm-8.5 9.22a6.55 6.55 0 0 1-.25-3.25h.25v2.75a.5.5 0 0 0 .34.47l2.5.73a.5.5 0 0 0 .41-.11l1.63-1.35a.5.5 0 0 0 .11-.42l-.34-2.19a.5.5 0 0 0-.4-.42L2.1 6.49a.5.5 0 0 0-.6.5v3.76l-.25-.01Zm7.75.5h1.5a.75.75 0 0 1 0 1.5H7.99v-1.5Zm-1.5.72a.75.75 0 0 1 0 1.5H4.3a.75.75 0 0 1 0-1.5h4.6Zm8.25-3.72a6.53 6.53 0 0 1-.5 1.75l-.5-.13a.75.75 0 0 1-.42-1.15.75.75 0 0 1 .59-.36l.92-.11c.09.18.16.37.2.56l-.29.63Z"/></svg> ${project.year}</div>
+    </article>`;
+
+  const render = (filter) => {
+    const active = filter || "All";
+    const list = active === "All" ? projects : projects.filter((project) => project.category === active);
+    grid.innerHTML = list.map(card).join("");
+  };
+
+  bar.addEventListener("click", (event) => {
+    const chip = event.target.closest(".filter-chip");
+    if (!chip) return;
+    bar.querySelectorAll(".filter-chip").forEach((item) => item.classList.remove("active-chip"));
+    chip.classList.add("active-chip");
+    render(chip.dataset.category);
+  });
+
+  render("All");
+})();</script> <section id="qualifications" class="section"> <div class="container"> <h2 class="section-title">Qualifications</h2> <div class="quals-card"> <h3 class="block-label">Education</h3> <div class="timeline"> <div class="tl-item"> <div class="tl-period">Expected Graduation: 2027</div> <div class="tl-title">Bachelor of Technology in Information Technology</div> <div class="tl-org">Peri Institute of Technology, Chennai</div> <div class="tl-detail">CGPA: 8.5</div> </div> </div> <h3 class="block-label">Certifications</h3> <ul class="cert-list"> <li>Introduction to Python — SoloLearn</li><li>Web Development Basics — Wipro</li><li>C Programming — NPTEL</li><li>Database Handling — Skill Rack</li> </ul> <h3 class="block-label">Languages</h3> <div class="languages-grid"> <span class="language-chip">English</span><span class="language-chip">Tamil</span> </div> </div> </div> </section> <section id="contact" class="section"> <div class="container"> <h2 class="section-title">Contact</h2> <div class="card contact-card reveal"> <p class="contact-text">Interested in working together or just want to say hello?
+Feel free to reach out — I usually reply within a day.</p> <div class="contact-detail"> <a href="mailto:sachinrajendran.19@gmail.com"> <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"> <path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88l6.5-3.81Z"></path> </svg> sachinrajendran.19@gmail.com </a> <span> <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"> <path fill="currentColor" d="M1.75 1.782c.696 0 1.389.105 2.058.318.571.18.868 1.046.845 1.666-.069 1.871-.739 2.28-.55 3.688.188 1.409 1.3 2.52 2.71 2.71 1.406.188 1.815-.482 3.687-.55.62-.024 1.485.274 1.666.845.213.669.317 1.362.317 2.058 0 .5-.253.965-.622 1.247-.28.21-1.66 1.15-2.636.885-2.866-.775-4.785-1.038-6.645-2.898-1.86-1.861-2.124-3.78-2.898-6.646-.265-.977.674-2.355.885-2.635.282-.369.747-.622 1.246-.622ZM8 0a8 8 0 1 1 .699 15.966l-4.49 1.348a1 1 0 0 1-1.235-1.002l.059-4.702a8 8 0 0 1 4.967-11.61Z"></path> </svg> +91 9342937175 </span> <span> <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"> <path fill="currentColor" d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Z"></path> </svg> Chennai, Tamil Nadu, India </span> </div> <div class="contact-actions"> <a class="btn btn-primary" href="mailto:sachinrajendran.19@gmail.com">Send me an email</a> <a class="btn btn-ghost" href="https://github.com/sachinrajendran19-star" target="_blank" rel="noopener noreferrer">GitHub</a> <a class="btn btn-ghost" href="https://www.linkedin.com/in/sachin-rajendran-bb5865367" target="_blank" rel="noopener noreferrer">LinkedIn</a> </div> </div> </div> </section> </main> <footer class="site-footer"> <div class="container footer-inner"> <span>&copy; <span id="footerYear">2026</span> Sachin Rajendran. All rights reserved.</span> <span class="footer-heart">Built with <span aria-hidden="true">&#9829;</span> using Astro</span> </div> </footer> <script type="module">const t=document.getElementById("footerYear"),e=()=>{t.textContent=String(new Date().getFullYear())};e();setInterval(e,60*1e3);</script>  <script type="module">const s=new IntersectionObserver(e=>{e.forEach(r=>{r.isIntersecting&&(r.target.classList.add("visible"),s.unobserve(r.target))})},{threshold:.1});document.querySelectorAll(".reveal").forEach(e=>s.observe(e));</script> </body> </html>

@@ -1,0 +1,48 @@
+---
+import { EDUCATION, CERTIFICATIONS, LANGUAGES } from "../data/portfolio.js";
+---
+
+<section id="qualifications" class="section">
+  <div class="container">
+    <h2 class="section-title">Qualifications</h2>
+    <div class="quals-card">
+      <h3 class="block-label">Education</h3>
+      <div class="timeline">
+        {
+          EDUCATION.map(
+            (item) => (
+              <div class="tl-item">
+                <div class="tl-period">{item.period}</div>
+                <div class="tl-title">{item.degree}</div>
+                <div class="tl-org">{item.org}</div>
+                <div class="tl-detail">{item.detail}</div>
+              </div>
+            )
+          )
+        }
+      </div>
+
+      <h3 class="block-label">Certifications</h3>
+      <ul class="cert-list">
+        {
+          CERTIFICATIONS.map(
+            (cert) => (
+              <li>{cert}</li>
+            )
+          )
+        }
+      </ul>
+
+      <h3 class="block-label">Languages</h3>
+      <div class="languages-grid">
+        {
+          LANGUAGES.map(
+            (language) => (
+              <span class="language-chip">{language}</span>
+            )
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Qualifications from "../components/Qualifications.astro";
+import Contact from "../components/Contact.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { IDENTITY } from "../data/portfolio.js";
+---
+
+<BaseLayout title={`${IDENTITY.name} | Portfolio`} description="Personal portfolio of projects and qualifications.">
+  <SiteHeader />
+  <main>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Qualifications />
+    <Contact />
+  </main>
+  <SiteFooter />
+</BaseLayout>

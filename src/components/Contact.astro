@@ -1,0 +1,39 @@
+---
+import { IDENTITY } from "../data/portfolio.js";
+
+const contactText = `Interested in working together or just want to say hello?\nFeel free to reach out — I usually reply within a day.`;
+---
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="card contact-card reveal">
+      <p class="contact-text">{contactText}</p>
+      <div class="contact-detail">
+        <a href={`mailto:${IDENTITY.email}`}>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88l6.5-3.81Z" />
+          </svg>
+          {IDENTITY.email}
+        </a>
+        <span>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M1.75 1.782c.696 0 1.389.105 2.058.318.571.18.868 1.046.845 1.666-.069 1.871-.739 2.28-.55 3.688.188 1.409 1.3 2.52 2.71 2.71 1.406.188 1.815-.482 3.687-.55.62-.024 1.485.274 1.666.845.213.669.317 1.362.317 2.058 0 .5-.253.965-.622 1.247-.28.21-1.66 1.15-2.636.885-2.866-.775-4.785-1.038-6.645-2.898-1.86-1.861-2.124-3.78-2.898-6.646-.265-.977.674-2.355.885-2.635.282-.369.747-.622 1.246-.622ZM8 0a8 8 0 1 1 .699 15.966l-4.49 1.348a1 1 0 0 1-1.235-1.002l.059-4.702a8 8 0 0 1 4.967-11.61Z" />
+          </svg>
+          {IDENTITY.phone}
+        </span>
+        <span>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Z" />
+          </svg>
+          {IDENTITY.location}
+        </span>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href={`mailto:${IDENTITY.email}`}>Send me an email</a>
+        <a class="btn btn-ghost" href={IDENTITY.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href={IDENTITY.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import { ABOUT } from "../data/portfolio.js";
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <div class="card reveal">
+        <p class="about-bio">{ABOUT.bio}</p>
+      </div>
+      <div class="stats-grid">
+        {
+          ABOUT.stats.map(
+            (stat) => (
+              <div class="stat-item reveal">
+                <span class="stat-value">{stat.value}</span>
+                <span class="stat-label">{stat.label}</span>
+              </div>
+            )
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

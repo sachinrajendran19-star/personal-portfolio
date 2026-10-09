@@ -1,0 +1,42 @@
+---
+import { SKILLS } from "../data/portfolio.js";
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+    <div class="skills-grid">
+      {
+        SKILLS.map(
+          (skill) => (
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <span class="skill-name">{skill.name}</span>
+                <span class="skill-level">{skill.level}</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-pct={Math.min(100, Math.max(0, skill.pct))}></div>
+              </div>
+            </div>
+          )
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const fills = document.querySelectorAll(".skill-fill");
+  const bars = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.pct + "%";
+          bars.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  fills.forEach((fill) => bars.observe(fill));
+</script>

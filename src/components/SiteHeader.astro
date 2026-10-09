@@ -1,0 +1,105 @@
+---
+import { IDENTITY } from "../data/portfolio.js";
+
+const initials = IDENTITY.name
+  .split(/\s+/)
+  .map((word) => word[0])
+  .slice(0, 2)
+  .join("")
+  .toUpperCase();
+
+const navItems = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#qualifications", label: "Qualifications" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand">
+      <span class="brand-avatar">{initials}</span>
+      <span class="brand-name">{IDENTITY.name}</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      {
+        navItems.map((item) => (
+          <a href={item.href} class="nav-link">{item.label}</a>
+        ))
+      }
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+        <svg class="icon icon-sun" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0Zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm8-5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8ZM2.25 8a.75.75 0 0 1-.75.75H0a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 2.25 8Zm9.55-4.8.94-.94a.75.75 0 0 1 1.06 1.06l-.94.94a.75.75 0 0 1-1.06-1.06ZM3.2 11.2l-.94.94a.75.75 0 0 1-1.06-1.06l.94-.94a.75.75 0 0 1 1.06 1.06Zm9.5 1.06.94.94a.75.75 0 0 1-1.06 1.06l-.94-.94a.75.75 0 0 1 1.06-1.06ZM3.2 4.8a.75.75 0 0 1-1.06 1.06l-.94-.94a.75.75 0 0 1 1.06-1.06l.94.94Zm7.08 2.4A2.28 2.28 0 1 1 7.28 9.6 2.28 2.28 0 0 1 10.28 7.2Z" />
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.5 5.5 0 1 0 7.678-7.678Z" />
+        </svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon icon-menu" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor" d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75Zm0 5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75Z" />
+        </svg>
+        <svg class="icon icon-close" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor" d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const meta = document.querySelector('meta[name="theme-color"]');
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const html = document.documentElement;
+    const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    if (meta) meta.setAttribute("content", next === "dark" ? "#0d1117" : "#ffffff");
+  });
+
+  const autoTheme = () => {
+    if (localStorage.getItem("theme")) return;
+    const hour = Number(new Date().toLocaleTimeString("en-GB", { timeZone: "Asia/Kolkata", hour: "numeric", hour12: false }));
+    const next = hour >= 7 && hour < 19 ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    if (meta) meta.setAttribute("content", next === "dark" ? "#0d1117" : "#ffffff");
+  };
+  setInterval(autoTheme, 5 * 60 * 1000);
+
+  const toggle = document.getElementById("navToggle");
+  toggle.addEventListener("click", () => {
+    const open = document.documentElement.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.documentElement.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = document.querySelectorAll(".nav-link");
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          links.forEach((link) => link.classList.remove("active-link"));
+          const target = document.querySelector(`a[href="#${entry.target.id}"]`);
+          if (target) target.classList.add("active-link");
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  links.forEach((link) => {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (section) spy.observe(section);
+  });
+</script>

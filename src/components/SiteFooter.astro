@@ -1,0 +1,20 @@
+---
+import { IDENTITY } from "../data/portfolio.js";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footerYear">{year}</span> {IDENTITY.name}. All rights reserved.</span>
+    <span class="footer-heart">Built with <span aria-hidden="true">&#9829;</span> using Astro</span>
+  </div>
+</footer>
+
+<script>
+  const yearEl = document.getElementById("footerYear");
+  const updateYear = () => {
+    yearEl.textContent = String(new Date().getFullYear());
+  };
+  updateYear();
+  setInterval(updateYear, 60 * 1000);
+</script>

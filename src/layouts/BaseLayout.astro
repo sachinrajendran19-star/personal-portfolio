@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+
+const { title, description } = Astro.props;
+const defaultDescription = "Personal portfolio of projects and qualifications.";
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description ?? defaultDescription} />
+    <meta name="theme-color" id="themeColor" content="#0d1117" />
+    <title>{title}</title>
+    <script is:inline>
+      (function () {
+        try {
+          var stored = null;
+          try {
+            stored = localStorage.getItem("theme");
+          } catch (error) {
+            void error;
+          }
+          var tz = "Asia/Kolkata";
+          var hour = Number(new Date().toLocaleTimeString("en-GB", { timeZone: tz, hour: "numeric", hour12: false }));
+          var isDaytime = hour >= 7 && hour < 19;
+          var theme = stored || (isDaytime ? "light" : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          void error;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
