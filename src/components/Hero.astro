@@ -34,6 +34,19 @@ const socials = [
 
 <section id="home" class="section hero-section">
   <div class="container hero-panel">
+    <div class="hero-deco" aria-hidden="true">
+      <div class="tech-cube">
+        <span class="c-face c-front">{`</>`}</span>
+        <span class="c-face c-back">{`{ }`}</span>
+        <span class="c-face c-right">( )</span>
+        <span class="c-face c-left">=&gt;</span>
+        <span class="c-face c-top">&amp;&amp;</span>
+        <span class="c-face c-bottom">JSON</span>
+      </div>
+      <span class="chip chip-1" style="--z: 70px">JS</span>
+      <span class="chip chip-2" style="--z: 110px">{`&gt;_`}</span>
+      <span class="chip chip-3" style="--z: 40px">{`{ }`}</span>
+    </div>
     <div class="hero-card">
       <div class="hero-left">
         <img class="avatar avatar-lg" id="heroAvatar" src={IDENTITY.photo} alt={`${IDENTITY.name} profile photo`} />
@@ -181,4 +194,22 @@ const socials = [
   };
   tick();
   setInterval(tick, 1000);
+
+  const panel = document.querySelector(".hero-panel");
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (panel && canHover && !reduceMotion) {
+    panel.classList.add("tilt");
+    panel.addEventListener("mousemove", (event) => {
+      const rect = panel.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width - 0.5;
+      const py = (event.clientY - rect.top) / rect.height - 0.5;
+      panel.style.setProperty("--rx", `${(-py * 6).toFixed(2)}deg`);
+      panel.style.setProperty("--ry", `${(px * 8).toFixed(2)}deg`);
+    });
+    panel.addEventListener("mouseleave", () => {
+      panel.style.setProperty("--rx", "0deg");
+      panel.style.setProperty("--ry", "0deg");
+    });
+  }
 </script>
