@@ -34,6 +34,7 @@ const defaultDescription = "Personal portfolio of projects and qualifications.";
     </script>
   </head>
   <body>
+    <div id="scrollProgress" aria-hidden="true"></div>
     <slot />
     <script>
       const observer = new IntersectionObserver(
@@ -47,7 +48,38 @@ const defaultDescription = "Personal portfolio of projects and qualifications.";
         },
         { threshold: 0.1 }
       );
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      const revealEls = document.querySelectorAll(".reveal");
+      revealEls.forEach((el, index) => {
+        el.style.transitionDelay = `${(index % 6) * 60}ms`;
+        observer.observe(el);
+      });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const bar = document.getElementById("scrollProgress");
+      const deco = document.querySelector(".hero-deco");
+      let ticking = false;
+
+      if (bar && !reduceMotion) {
+        const updateBar = () => {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+        };
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              updateBar();
+              if (deco && window.innerWidth > 900) {
+                const offset = (deco.getBoundingClientRect().top - window.innerHeight / 2) * 0.06;
+                deco.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+        window.addEventListener("resize", updateBar);
+        updateBar();
+      }
     </script>
   </body>
 </html>

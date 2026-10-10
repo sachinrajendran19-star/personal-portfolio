@@ -270,6 +270,18 @@ html[data-theme="light"] .icon-sun {
   display: none;
 }
 
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 300;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+  box-shadow: 0 0 10px var(--accent);
+}
+
 /* Sections */
 
 .section {
@@ -334,13 +346,13 @@ html[data-theme="light"] .icon-sun {
 
 .tech-cube {
   position: absolute;
-  right: 7%;
-  bottom: 12%;
-  width: 92px;
-  height: 92px;
+  right: 16%;
+  top: 30%;
+  width: 84px;
+  height: 84px;
   transform-style: preserve-3d;
   animation: cubeSpin 20s linear infinite;
-  opacity: 0.55;
+  opacity: 0.22;
 }
 
 @keyframes cubeSpin {
@@ -358,50 +370,50 @@ html[data-theme="light"] .icon-sun {
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--accent);
-  background: var(--bg-panel);
-  border: 1px solid var(--border-strong);
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: inset 0 0 18px rgba(88, 166, 255, 0.25);
+  box-shadow: inset 0 0 18px var(--accent-bg);
 }
 
 .c-front {
-  transform: translateZ(46px);
+  transform: translateZ(42px);
 }
 
 .c-back {
-  transform: rotateY(180deg) translateZ(46px);
+  transform: rotateY(180deg) translateZ(42px);
 }
 
 .c-right {
-  transform: rotateY(90deg) translateZ(46px);
+  transform: rotateY(90deg) translateZ(42px);
 }
 
 .c-left {
-  transform: rotateY(-90deg) translateZ(46px);
+  transform: rotateY(-90deg) translateZ(42px);
 }
 
 .c-top {
-  transform: rotateX(90deg) translateZ(46px);
+  transform: rotateX(90deg) translateZ(42px);
 }
 
 .c-bottom {
-  transform: rotateX(-90deg) translateZ(46px);
+  transform: rotateX(-90deg) translateZ(42px);
 }
 
 .chip {
   position: absolute;
-  padding: 6px 12px;
+  padding: 5px 11px;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent);
-  background: var(--bg-panel);
-  border: 1px solid var(--border-strong);
+  background: transparent;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  opacity: 0.32;
   transform: translate3d(0, 0, var(--z, 0px));
   animation: chipFloat 5s ease-in-out infinite alternate;
 }
@@ -416,19 +428,19 @@ html[data-theme="light"] .icon-sun {
 }
 
 .chip-1 {
-  right: 30%;
+  right: 8%;
   top: 14%;
 }
 
 .chip-2 {
-  right: 12%;
-  top: 34%;
+  right: 4%;
+  bottom: 30%;
   animation-delay: -2s;
 }
 
 .chip-3 {
-  left: 34%;
-  bottom: 10%;
+  left: 1%;
+  bottom: 6%;
   animation-delay: -4s;
 }
 
